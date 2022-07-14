@@ -1,14 +1,18 @@
 import React from "react"
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import GreetingWorld from "./GreetingWorld";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from '.././redux/configureStore';
+import Greeting from "./Greeting";
 
 class App extends React.Component {
   render () {
     return (
       <BrowserRouter>
-        <Switch>
-          <Route path="/" element={ <GreetingWorld greeting='Hello!' /> } />
-        </Switch>
+        <Provider store={ store }>
+          <Routes>
+            <Route path="/" element={ <Greeting /> } />
+          </Routes>
+        </Provider>
       </BrowserRouter>
     );
   }
