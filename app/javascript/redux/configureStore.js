@@ -1,17 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import greetingReducer from './reducers/greeting'
+import { composeWithDevTools } from 'redux-devtools-extension'  
 import { applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { getGreeting } from "./reducers/greeting";
 
 const store = configureStore({
-  reducer: {
-    greeting: greetingReducer,
-  }},
+  reducer: { greeting: greetingReducer, }},
   composeWithDevTools(applyMiddleware(thunk, logger)),
 );
 
-store.dispatch(getGreeting());
 export default store; 

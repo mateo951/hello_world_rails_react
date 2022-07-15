@@ -19,7 +19,7 @@ export const getMessage = (payload) => ({
 });
 
 export const getGreeting = () => async (dispatch) => {
-  const response = await fetch('v1/greeting.json');
+  const response = await fetch("../../../api/v1/greetings");
   const data = await response.json();
-  dispatch(getMessage(data.message));
+  dispatch(getMessage(data));
 }; 

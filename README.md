@@ -3,6 +3,10 @@
 The main idea begind this project is to implement a connection between a Ruby on Rails back-end and React front-end.
 Understanding the pros and cons of different approaches of connecting Ruby on Rails back-end with React front-end.
 
+image.png
+
+![ScreenShot](./app/assets/images/screen-shot-1.PNG?raw=true)
+
 Built With
 
 - Ruby

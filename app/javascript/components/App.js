@@ -4,16 +4,17 @@ import { Provider } from "react-redux";
 import store from '.././redux/configureStore';
 import Greeting from "./Greeting";
 
+
 class App extends React.Component {
   render () {
     return (
+    <Provider store={ store }>
       <BrowserRouter>
-        <Provider store={ store }>
           <Routes>
             <Route path="/" element={ <Greeting /> } />
           </Routes>
-        </Provider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
